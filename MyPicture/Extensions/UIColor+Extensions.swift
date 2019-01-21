@@ -6,4 +6,8 @@
 //  Copyright © 2019 Ctibor Šebák. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension UIColor {
+    static let skyBlue = UIColor(red: 0/255, green: 253/255, blue: 255/255, alpha: 1)
+}

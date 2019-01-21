@@ -9,12 +9,24 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
+    //MARK: - Properties
+    
+    
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    //MARK: - Initialization
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        usernameTextField.applyLoginViewControllerColorPreset(placeholder: "Username")
+        passwordTextField.applyLoginViewControllerColorPreset(placeholder: "Password")
     }
 
 
+    @IBAction func getPictureButtonPressed(_ sender: Any) {
+        LoadingOverlay().showOverlay(viewController: self)
+    }
 }
 
