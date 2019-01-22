@@ -10,6 +10,9 @@
 		8F30334821F4F2EC0081827E /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F30334721F4F2EC0081827E /* UIColor+Extensions.swift */; };
 		8F30334A21F4F3CB0081827E /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F30334921F4F3CB0081827E /* UITextField+Extensions.swift */; };
 		8F30335321F652000081827E /* LoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F30335221F652000081827E /* LoadingOverlay.swift */; };
+		8F30335521F734E30081827E /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F30335421F734E30081827E /* UIButton+Extensions.swift */; };
+		8F30335A21F744F10081827E /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F30335921F744F10081827E /* WebService.swift */; };
+		8FB1888221F789A300CAB662 /* SHA1Hashing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB1888121F789A300CAB662 /* SHA1Hashing.swift */; };
 		8FFAD93E21F4CF7A0050E584 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFAD93D21F4CF7A0050E584 /* AppDelegate.swift */; };
 		8FFAD94021F4CF7A0050E584 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFAD93F21F4CF7A0050E584 /* LoginViewController.swift */; };
 		8FFAD94321F4CF7A0050E584 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FFAD94121F4CF7A0050E584 /* Main.storyboard */; };
@@ -21,6 +24,9 @@
 		8F30334721F4F2EC0081827E /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		8F30334921F4F3CB0081827E /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		8F30335221F652000081827E /* LoadingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingOverlay.swift; sourceTree = "<group>"; };
+		8F30335421F734E30081827E /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
+		8F30335921F744F10081827E /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		8FB1888121F789A300CAB662 /* SHA1Hashing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA1Hashing.swift; sourceTree = "<group>"; };
 		8FFAD93A21F4CF7A0050E584 /* MyPicture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPicture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FFAD93D21F4CF7A0050E584 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FFAD93F21F4CF7A0050E584 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +53,7 @@
 				8F30335221F652000081827E /* LoadingOverlay.swift */,
 				8F30334721F4F2EC0081827E /* UIColor+Extensions.swift */,
 				8F30334921F4F3CB0081827E /* UITextField+Extensions.swift */,
+				8F30335421F734E30081827E /* UIButton+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -56,6 +63,15 @@
 			children = (
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8F30335821F7437F0081827E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8F30335921F744F10081827E /* WebService.swift */,
+				8FB1888121F789A300CAB662 /* SHA1Hashing.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		8FFAD93121F4CF7A0050E584 = {
@@ -80,6 +96,7 @@
 				8F30335021F651970081827E /* ViewModels */,
 				8FFAD95021F4D4EE0050E584 /* Views */,
 				8FFAD94F21F4D4D20050E584 /* Controllers */,
+				8F30335821F7437F0081827E /* Services */,
 				8F30334621F4F2D80081827E /* Extensions */,
 				8FFAD95121F4D5080050E584 /* Support Files */,
 			);
@@ -185,6 +202,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FFAD94021F4CF7A0050E584 /* LoginViewController.swift in Sources */,
+				8F30335A21F744F10081827E /* WebService.swift in Sources */,
+				8F30335521F734E30081827E /* UIButton+Extensions.swift in Sources */,
+				8FB1888221F789A300CAB662 /* SHA1Hashing.swift in Sources */,
 				8F30334A21F4F3CB0081827E /* UITextField+Extensions.swift in Sources */,
 				8F30334821F4F2EC0081827E /* UIColor+Extensions.swift in Sources */,
 				8FFAD93E21F4CF7A0050E584 /* AppDelegate.swift in Sources */,

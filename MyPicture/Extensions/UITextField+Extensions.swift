@@ -10,11 +10,11 @@ import UIKit
 
 extension UITextField {
     
-    func applyLoginViewControllerColorPreset(placeholder: String) {
+    public func applyUITextViewSkyBlueColorPreset(placeholder: String) {
         self.backgroundColor = .none
         self.layer.cornerRadius = 30
         self.layer.borderWidth = 1
-        self.layer.borderColor = UIColor.skyBlue.cgColor
+        self.layer.borderColor = UIColor.white.cgColor
         self.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         self.textColor = UIColor.skyBlue
     }

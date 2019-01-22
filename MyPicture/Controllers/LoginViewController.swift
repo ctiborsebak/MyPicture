@@ -15,18 +15,21 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var getPictureButton: UIButton!
     
     //MARK: - Initialization
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        usernameTextField.applyLoginViewControllerColorPreset(placeholder: "Username")
-        passwordTextField.applyLoginViewControllerColorPreset(placeholder: "Password")
+        getPictureButton.applyUIButtonSkyBlueColorPreset(buttonText: "GET PICTURE")
+        usernameTextField.applyUITextViewSkyBlueColorPreset(placeholder: "Username")
+        passwordTextField.applyUITextViewSkyBlueColorPreset(placeholder: "Password")
+        let service = WebService()
+        service.fetchPicture(username: "sebak", password: "ctibor")
     }
-
 
     @IBAction func getPictureButtonPressed(_ sender: Any) {
-        LoadingOverlay().showOverlay(viewController: self)
+//        let loadingOverlay = LoadingOverlay()
+//        loadingOverlay.showOverlay(viewController: self)
     }
 }
-

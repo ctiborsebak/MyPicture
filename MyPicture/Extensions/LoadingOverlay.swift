@@ -32,4 +32,3 @@ public class LoadingOverlay {
         overlayView.dismiss(animated: true, completion: nil)
     }
 }
-
