@@ -25,11 +25,14 @@ class LoginViewController: UIViewController {
         usernameTextField.applyUITextViewSkyBlueColorPreset(placeholder: "Username")
         passwordTextField.applyUITextViewSkyBlueColorPreset(placeholder: "Password")
         let service = WebService()
-        service.fetchPicture(username: "sebak", password: "ctibor")
+        let testVM = UserViewModel(login: "sebak", password: "ctibor")
+        service.fetchPicture(userVM: testVM) { (result) in
+            print("\(result)")
+            }
     }
-
+    
     @IBAction func getPictureButtonPressed(_ sender: Any) {
-//        let loadingOverlay = LoadingOverlay()
-//        loadingOverlay.showOverlay(viewController: self)
+        //        let loadingOverlay = LoadingOverlay()
+        //        loadingOverlay.showOverlay(viewController: self)
     }
 }

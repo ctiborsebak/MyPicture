@@ -10,8 +10,12 @@ import UIKit
 
 public class LoadingOverlay {
     
+    // MARK: - Properties
+    
     var activityIndicator : UIActivityIndicatorView!
     var overlayView: UIAlertController!
+    
+    // MARK: - Initialization
     
     init(){
         overlayView = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
@@ -21,6 +25,8 @@ public class LoadingOverlay {
         activityIndicator.startAnimating()
         overlayView.view.addSubview(activityIndicator)
     }
+    
+    // MARK: - Operating Methods
     
     public func showOverlay(viewController: UIViewController) {
         viewController.present(overlayView, animated: true, completion: nil)
