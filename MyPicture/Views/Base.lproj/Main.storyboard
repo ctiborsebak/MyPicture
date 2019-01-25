@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wBT-Q5-GR2">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,13 +19,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iYC-f5-CVo" userLabel="TopTwoThirdsContainerView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="591.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="591.33333333333337"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2yh-5m-xeM" userLabel="TopFirstThirdContainer">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="295.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="295.66666666666669"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jAc-C3-C9Q" userLabel="TopSecondThirdContainer">
-                                        <rect key="frame" x="0.0" y="295.5" width="414" height="207"/>
+                                        <rect key="frame" x="0.0" y="295.66666666666669" width="414" height="207"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" clearsOnBeginEditing="YES" adjustsFontForContentSizeCategory="YES" minimumFontSize="19" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="10Y-TF-F1Z" userLabel="Password Text Field">
                                                 <rect key="frame" x="62" y="74" width="290" height="59"/>
@@ -41,22 +41,11 @@
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" clearsOnBeginEditing="YES" adjustsFontForContentSizeCategory="YES" minimumFontSize="19" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="HH5-cM-Vgw">
-                                        <rect key="frame" x="62" y="266" width="290" height="59"/>
+                                        <rect key="frame" x="62" y="266" width="290" height="59.333333333333314"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="next"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxa-7D-zIo">
-                                        <rect key="frame" x="62" y="532" width="290" height="59.5"/>
-                                        <color key="backgroundColor" red="0.0" green="0.89741386089999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="23"/>
-                                        <state key="normal" title="GET PICTURE">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="getPictureButtonPressed:" destination="wBT-Q5-GR2" eventType="touchUpInside" id="OrA-MF-fp8"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="10Y-TF-F1Z" firstAttribute="height" secondItem="iYC-f5-CVo" secondAttribute="height" multiplier="0.1" id="0Vf-0Z-Gr9"/>
@@ -64,9 +53,7 @@
                                     <constraint firstItem="jAc-C3-C9Q" firstAttribute="height" secondItem="iYC-f5-CVo" secondAttribute="height" multiplier="0.35" id="4FL-8C-Tm1"/>
                                     <constraint firstItem="HH5-cM-Vgw" firstAttribute="centerY" secondItem="iYC-f5-CVo" secondAttribute="centerY" id="5ZF-Bu-heK"/>
                                     <constraint firstItem="2yh-5m-xeM" firstAttribute="centerX" secondItem="iYC-f5-CVo" secondAttribute="centerX" id="H7e-6j-UmP"/>
-                                    <constraint firstAttribute="bottom" secondItem="zxa-7D-zIo" secondAttribute="bottom" id="JH3-NR-thI"/>
                                     <constraint firstItem="2yh-5m-xeM" firstAttribute="height" secondItem="iYC-f5-CVo" secondAttribute="height" multiplier="0.5" id="NUY-sj-l2v"/>
-                                    <constraint firstItem="zxa-7D-zIo" firstAttribute="height" secondItem="iYC-f5-CVo" secondAttribute="height" multiplier="0.1" id="V8Y-Uz-IaW"/>
                                     <constraint firstItem="jAc-C3-C9Q" firstAttribute="width" secondItem="iYC-f5-CVo" secondAttribute="width" id="XLw-Pz-761"/>
                                     <constraint firstItem="2yh-5m-xeM" firstAttribute="top" secondItem="iYC-f5-CVo" secondAttribute="top" id="cMj-dv-0PQ"/>
                                     <constraint firstItem="HH5-cM-Vgw" firstAttribute="height" secondItem="iYC-f5-CVo" secondAttribute="height" multiplier="0.1" id="lTi-sJ-uIx"/>
@@ -76,20 +63,41 @@
                                     <constraint firstItem="HH5-cM-Vgw" firstAttribute="centerX" secondItem="iYC-f5-CVo" secondAttribute="centerX" id="ycl-Ik-Gih"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxa-7D-zIo">
+                                <rect key="frame" x="62" y="802.33333333333337" width="290" height="59.333333333333371"/>
+                                <color key="backgroundColor" red="0.0" green="0.89741386089999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="21"/>
+                                <state key="normal" title="GET PICTURE">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="getPictureButtonPressed:" destination="wBT-Q5-GR2" eventType="touchUpInside" id="OrA-MF-fp8"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aOB-qp-qfb">
+                                <rect key="frame" x="87" y="611.33333333333337" width="240" height="141"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="iYC-f5-CVo" firstAttribute="width" secondItem="ch0-SC-m9c" secondAttribute="width" id="4cV-1H-Ptp"/>
+                            <constraint firstItem="zxa-7D-zIo" firstAttribute="top" secondItem="aOB-qp-qfb" secondAttribute="bottom" constant="50" id="5l3-Nh-rKT"/>
                             <constraint firstItem="iYC-f5-CVo" firstAttribute="height" secondItem="ch0-SC-m9c" secondAttribute="height" multiplier="0.66" id="9Lh-9F-pmq"/>
+                            <constraint firstItem="aOB-qp-qfb" firstAttribute="top" secondItem="iYC-f5-CVo" secondAttribute="bottom" constant="20" id="BXW-vA-c2m"/>
+                            <constraint firstItem="y5V-uq-rtn" firstAttribute="trailing" secondItem="aOB-qp-qfb" secondAttribute="trailing" constant="87" id="CVR-yW-Zfg"/>
+                            <constraint firstAttribute="bottom" secondItem="zxa-7D-zIo" secondAttribute="bottom" constant="34.5" id="ElE-DI-X2p"/>
                             <constraint firstItem="iYC-f5-CVo" firstAttribute="top" secondItem="ch0-SC-m9c" secondAttribute="top" id="JTz-vR-zTm"/>
-                            <constraint firstItem="zxa-7D-zIo" firstAttribute="width" secondItem="ch0-SC-m9c" secondAttribute="width" multiplier="0.7" id="SkK-QY-GOZ"/>
-                            <constraint firstItem="zxa-7D-zIo" firstAttribute="centerX" secondItem="y5V-uq-rtn" secondAttribute="centerX" id="VGC-RS-A5I"/>
+                            <constraint firstItem="zxa-7D-zIo" firstAttribute="width" secondItem="iYC-f5-CVo" secondAttribute="width" multiplier="0.7" id="T8n-iV-qLx"/>
+                            <constraint firstItem="zxa-7D-zIo" firstAttribute="height" secondItem="iYC-f5-CVo" secondAttribute="height" multiplier="0.1" id="Wec-ST-HCG"/>
+                            <constraint firstItem="aOB-qp-qfb" firstAttribute="leading" secondItem="y5V-uq-rtn" secondAttribute="leading" constant="87" id="YS8-ZK-inE"/>
+                            <constraint firstItem="zxa-7D-zIo" firstAttribute="centerX" secondItem="iYC-f5-CVo" secondAttribute="centerX" id="ylX-7C-jTF"/>
                             <constraint firstItem="iYC-f5-CVo" firstAttribute="leading" secondItem="y5V-uq-rtn" secondAttribute="leading" id="zWt-Ru-JwH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="y5V-uq-rtn"/>
                     </view>
                     <connections>
                         <outlet property="getPictureButton" destination="zxa-7D-zIo" id="crB-nU-IQn"/>
+                        <outlet property="imageView" destination="aOB-qp-qfb" id="ay1-pC-ocX"/>
                         <outlet property="passwordTextField" destination="10Y-TF-F1Z" id="qih-VB-lU8"/>
                         <outlet property="usernameTextField" destination="HH5-cM-Vgw" id="CYW-AB-UKF"/>
                     </connections>

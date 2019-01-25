@@ -7,10 +7,12 @@
 //
 
 import Foundation
+import UIKit
 
 final class WebService {
     
     func fetchPicture(userVM: UserViewModel, completion: ((String) -> Void)?) {
+        // Fetches the picture from server via HTTP "POST" request, given the user credentials are valid
         let url = URL(string: "https://mobility.cleverlance.com/download/bootcamp/image.php")!
         var request = URLRequest(url: url)
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")

@@ -29,12 +29,16 @@ public class LoadingOverlay {
     // MARK: - Operating Methods
     
     public func showOverlay(viewController: UIViewController) {
-        viewController.present(overlayView, animated: true, completion: nil)
-        activityIndicator.startAnimating()
+        DispatchQueue.main.async {
+            viewController.present(self.overlayView, animated: true, completion: nil)
+            self.activityIndicator.startAnimating()
+        }
     }
     
     public func hideOverlayView() {
-        activityIndicator.stopAnimating()
-        overlayView.dismiss(animated: true, completion: nil)
+        DispatchQueue.main.async {
+            self.activityIndicator.stopAnimating()
+            self.overlayView.dismiss(animated: false, completion: nil)
+        }
     }
 }
