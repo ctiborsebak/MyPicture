@@ -21,6 +21,11 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupGUI()
+    }
+    
+    private func setupGUI() {
+        // Initial visual setup of various UI elements
         getPictureButton.applyUIButtonSkyBlueColorPreset(buttonText: "GET PICTURE")
         usernameTextField.applyUITextViewSkyBlueColorPreset(placeholder: "Username")
         passwordTextField.applyUITextViewSkyBlueColorPreset(placeholder: "Password")
@@ -29,7 +34,7 @@ class LoginViewController: UIViewController {
     // MARK: - User Interaction
     
     @IBAction func getPictureButtonPressed(_ sender: Any) {
-        // Attempts to fetch the picture from web service
+        // Attempts to fetch the picture from web service when "GET PICTURE" button is pressed
         usernameTextField.checkForEmpyTextField(viewController: self, alertMessage: "Username cannot be empty")
         passwordTextField.checkForEmpyTextField(viewController: self, alertMessage: "Password cannot be empty")
         let loadingOverlay = LoadingOverlay()
