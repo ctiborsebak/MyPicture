@@ -122,7 +122,7 @@ class SHA1Hashing {
         })
         
         var temp: String = "\(self.convert_hex(val: H0))\(self.convert_hex(val: H1))\(self.convert_hex(val: H2))\(self.convert_hex(val: H3))\(self.convert_hex(val: H4))";
-        print(temp)
+        //print(temp)
         temp = temp.lowercased()
         temp = temp.replacingOccurrences(of: " ", with: "")
         

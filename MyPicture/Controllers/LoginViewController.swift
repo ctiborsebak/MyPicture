@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 class LoginViewController: UIViewController {
     
@@ -24,7 +25,7 @@ class LoginViewController: UIViewController {
         setupGUI()
     }
     
-    private func setupGUI() {
+    fileprivate func setupGUI() {
         // Initial visual setup of various UI elements
         getPictureButton.applyUIButtonSkyBlueColorPreset(buttonText: "GET PICTURE")
         usernameTextField.applyUITextViewSkyBlueColorPreset(placeholder: "Username")
@@ -70,7 +71,7 @@ class LoginViewController: UIViewController {
     
     // MARK: - Helper methods
     
-    internal func presentAlert(message: String) {
+    fileprivate func presentAlert(message: String) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5 , execute: {
             let alertController = UIAlertController(title: "Network Error", message: message, preferredStyle: .alert)
             let action = UIAlertAction(title: "Cancel", style: .default, handler: nil)
@@ -78,4 +79,5 @@ class LoginViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
         })
     }
+    
 }

@@ -11,7 +11,7 @@ import UIKit
 
 final class WebService {
     
-    internal func fetchPicture(userVM: UserViewModel, completion: @escaping ((String) -> Void)) {
+     func fetchPicture(userVM: UserViewModel, completion: @escaping ((String) -> Void)) {
         // Attempts to fetch the picture from server via HTTP "POST" request, given the user credentials are valid
         let url = URL(string: "https://mobility.cleverlance.com/download/bootcamp/image.php")!
         var request = URLRequest(url: url)

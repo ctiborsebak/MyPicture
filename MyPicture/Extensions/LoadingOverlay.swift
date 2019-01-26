@@ -12,8 +12,8 @@ public class LoadingOverlay {
     
     // MARK: - Properties
     
-    var activityIndicator : UIActivityIndicatorView!
-    var overlayView: UIAlertController!
+    private var activityIndicator : UIActivityIndicatorView!
+    private var overlayView: UIAlertController!
     
     // MARK: - Initialization
     
@@ -28,7 +28,7 @@ public class LoadingOverlay {
     
     // MARK: - Operating Methods
     
-    public func showOverlay(viewController: UIViewController) {
+    func showOverlay(viewController: UIViewController) {
         // Presents the loading overlay
         DispatchQueue.main.async {
             viewController.present(self.overlayView, animated: true, completion: nil)
@@ -36,7 +36,7 @@ public class LoadingOverlay {
         }
     }
     
-    public func hideOverlayView() {
+    func hideOverlayView() {
         // Dismisses the loading overlay from view hierarchy
         DispatchQueue.main.async {
             self.activityIndicator.stopAnimating()
