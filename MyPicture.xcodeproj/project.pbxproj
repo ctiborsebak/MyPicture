@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		8F0CFFD321FA193100F9B90A /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0CFFD221FA193100F9B90A /* UserViewModel.swift */; };
+		8F0CFFD721FC6D4500F9B90A /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0CFFD621FC6D4500F9B90A /* String+Extensions.swift */; };
+		8F0CFFD921FC6FDB00F9B90A /* PictureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0CFFD821FC6FDB00F9B90A /* PictureViewModel.swift */; };
 		8F30334821F4F2EC0081827E /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F30334721F4F2EC0081827E /* UIColor+Extensions.swift */; };
 		8F30334A21F4F3CB0081827E /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F30334921F4F3CB0081827E /* UITextField+Extensions.swift */; };
-		8F30335321F652000081827E /* LoadingOverlayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F30335221F652000081827E /* LoadingOverlayViewModel.swift */; };
+		8F30335321F652000081827E /* LoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F30335221F652000081827E /* LoadingOverlay.swift */; };
 		8F30335521F734E30081827E /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F30335421F734E30081827E /* UIButton+Extensions.swift */; };
 		8F30335A21F744F10081827E /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F30335921F744F10081827E /* WebService.swift */; };
 		8FB1888221F789A300CAB662 /* SHA1Hashing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB1888121F789A300CAB662 /* SHA1Hashing.swift */; };
@@ -23,9 +25,11 @@
 
 /* Begin PBXFileReference section */
 		8F0CFFD221FA193100F9B90A /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		8F0CFFD621FC6D4500F9B90A /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		8F0CFFD821FC6FDB00F9B90A /* PictureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureViewModel.swift; sourceTree = "<group>"; };
 		8F30334721F4F2EC0081827E /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		8F30334921F4F3CB0081827E /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
-		8F30335221F652000081827E /* LoadingOverlayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingOverlayViewModel.swift; sourceTree = "<group>"; };
+		8F30335221F652000081827E /* LoadingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingOverlay.swift; sourceTree = "<group>"; };
 		8F30335421F734E30081827E /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		8F30335921F744F10081827E /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		8FB1888121F789A300CAB662 /* SHA1Hashing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA1Hashing.swift; sourceTree = "<group>"; };
@@ -52,9 +56,11 @@
 		8F30334621F4F2D80081827E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8F30335221F652000081827E /* LoadingOverlay.swift */,
 				8F30334721F4F2EC0081827E /* UIColor+Extensions.swift */,
 				8F30334921F4F3CB0081827E /* UITextField+Extensions.swift */,
 				8F30335421F734E30081827E /* UIButton+Extensions.swift */,
+				8F0CFFD621FC6D4500F9B90A /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -63,7 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				8F0CFFD221FA193100F9B90A /* UserViewModel.swift */,
-				8F30335221F652000081827E /* LoadingOverlayViewModel.swift */,
+				8F0CFFD821FC6FDB00F9B90A /* PictureViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -204,15 +210,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F0CFFD721FC6D4500F9B90A /* String+Extensions.swift in Sources */,
 				8FFAD94021F4CF7A0050E584 /* LoginViewController.swift in Sources */,
 				8F30335A21F744F10081827E /* WebService.swift in Sources */,
 				8F30335521F734E30081827E /* UIButton+Extensions.swift in Sources */,
 				8FB1888221F789A300CAB662 /* SHA1Hashing.swift in Sources */,
 				8F30334A21F4F3CB0081827E /* UITextField+Extensions.swift in Sources */,
 				8F30334821F4F2EC0081827E /* UIColor+Extensions.swift in Sources */,
+				8F0CFFD921FC6FDB00F9B90A /* PictureViewModel.swift in Sources */,
 				8FFAD93E21F4CF7A0050E584 /* AppDelegate.swift in Sources */,
 				8F0CFFD321FA193100F9B90A /* UserViewModel.swift in Sources */,
-				8F30335321F652000081827E /* LoadingOverlayViewModel.swift in Sources */,
+				8F30335321F652000081827E /* LoadingOverlay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

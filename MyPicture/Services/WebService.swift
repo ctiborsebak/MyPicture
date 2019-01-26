@@ -11,7 +11,7 @@ import UIKit
 
 final class WebService {
     
-    func fetchPicture(userVM: UserViewModel, completion: ((String) -> Void)?) {
+    internal func fetchPicture(userVM: UserViewModel, completion: ((String) -> Void)?) {
         // Fetches the picture from server via HTTP "POST" request, given the user credentials are valid
         let url = URL(string: "https://mobility.cleverlance.com/download/bootcamp/image.php")!
         var request = URLRequest(url: url)
@@ -31,6 +31,7 @@ final class WebService {
                 // Check for http errors
                 if httpStatus.statusCode == 401 {
                     completion!("authError")
+                    return
                 } else {
                     print("The HTTP status should be 200, but is: \(httpStatus.statusCode)")
                     completion!("error")

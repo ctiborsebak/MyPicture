@@ -20,4 +20,16 @@ extension UITextField {
         self.textColor = UIColor.skyBlue
     }
     
+    public func checkForEmpyTextField(viewController:UIViewController, alertMessage: String) {
+        // Throws an alert if a mandatory textfield is empty
+        if self.text == "" {
+            DispatchQueue.main.async( execute: {
+                let alertController = UIAlertController(title: "Error", message: alertMessage, preferredStyle: .alert)
+                let action = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+                alertController.addAction(action)
+                viewController.present(alertController, animated: true, completion: nil)
+                return
+            })
+        }
+    }
 }

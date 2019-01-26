@@ -27,7 +27,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jAc-C3-C9Q" userLabel="TopSecondThirdContainer">
                                         <rect key="frame" x="0.0" y="295.66666666666669" width="414" height="207"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" clearsOnBeginEditing="YES" adjustsFontForContentSizeCategory="YES" minimumFontSize="19" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="10Y-TF-F1Z" userLabel="Password Text Field">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="19" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="10Y-TF-F1Z" userLabel="Password Text Field">
                                                 <rect key="frame" x="62" y="74" width="290" height="59"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="17"/>
@@ -40,7 +40,7 @@
                                             <constraint firstItem="10Y-TF-F1Z" firstAttribute="width" secondItem="jAc-C3-C9Q" secondAttribute="width" multiplier="0.7" id="pBM-dG-EIz"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" clearsOnBeginEditing="YES" adjustsFontForContentSizeCategory="YES" minimumFontSize="19" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="HH5-cM-Vgw">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="19" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="HH5-cM-Vgw">
                                         <rect key="frame" x="62" y="266" width="290" height="59.333333333333314"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="17"/>
@@ -75,21 +75,21 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aOB-qp-qfb">
-                                <rect key="frame" x="87" y="611.33333333333337" width="240" height="141"/>
+                                <rect key="frame" x="62" y="535.66666666666663" width="290" height="236.66666666666663"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="aOB-qp-qfb" firstAttribute="width" secondItem="ch0-SC-m9c" secondAttribute="width" multiplier="0.7" id="3cY-GR-894"/>
                             <constraint firstItem="iYC-f5-CVo" firstAttribute="width" secondItem="ch0-SC-m9c" secondAttribute="width" id="4cV-1H-Ptp"/>
-                            <constraint firstItem="zxa-7D-zIo" firstAttribute="top" secondItem="aOB-qp-qfb" secondAttribute="bottom" constant="50" id="5l3-Nh-rKT"/>
                             <constraint firstItem="iYC-f5-CVo" firstAttribute="height" secondItem="ch0-SC-m9c" secondAttribute="height" multiplier="0.66" id="9Lh-9F-pmq"/>
-                            <constraint firstItem="aOB-qp-qfb" firstAttribute="top" secondItem="iYC-f5-CVo" secondAttribute="bottom" constant="20" id="BXW-vA-c2m"/>
-                            <constraint firstItem="y5V-uq-rtn" firstAttribute="trailing" secondItem="aOB-qp-qfb" secondAttribute="trailing" constant="87" id="CVR-yW-Zfg"/>
                             <constraint firstAttribute="bottom" secondItem="zxa-7D-zIo" secondAttribute="bottom" constant="34.5" id="ElE-DI-X2p"/>
+                            <constraint firstItem="aOB-qp-qfb" firstAttribute="centerX" secondItem="y5V-uq-rtn" secondAttribute="centerX" id="GLp-kl-Ms5"/>
                             <constraint firstItem="iYC-f5-CVo" firstAttribute="top" secondItem="ch0-SC-m9c" secondAttribute="top" id="JTz-vR-zTm"/>
+                            <constraint firstItem="zxa-7D-zIo" firstAttribute="top" secondItem="aOB-qp-qfb" secondAttribute="bottom" constant="30" id="Kzv-M3-iwW"/>
                             <constraint firstItem="zxa-7D-zIo" firstAttribute="width" secondItem="iYC-f5-CVo" secondAttribute="width" multiplier="0.7" id="T8n-iV-qLx"/>
                             <constraint firstItem="zxa-7D-zIo" firstAttribute="height" secondItem="iYC-f5-CVo" secondAttribute="height" multiplier="0.1" id="Wec-ST-HCG"/>
-                            <constraint firstItem="aOB-qp-qfb" firstAttribute="leading" secondItem="y5V-uq-rtn" secondAttribute="leading" constant="87" id="YS8-ZK-inE"/>
+                            <constraint firstItem="aOB-qp-qfb" firstAttribute="height" secondItem="iYC-f5-CVo" secondAttribute="height" multiplier="0.4" id="nic-7k-AQG"/>
                             <constraint firstItem="zxa-7D-zIo" firstAttribute="centerX" secondItem="iYC-f5-CVo" secondAttribute="centerX" id="ylX-7C-jTF"/>
                             <constraint firstItem="iYC-f5-CVo" firstAttribute="leading" secondItem="y5V-uq-rtn" secondAttribute="leading" id="zWt-Ru-JwH"/>
                         </constraints>
