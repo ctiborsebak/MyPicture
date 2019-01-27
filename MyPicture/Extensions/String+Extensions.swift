@@ -24,7 +24,6 @@ extension String {
     }
     
     public func convertBase64ToImage() -> UIImage {
-        // Converts base64 String into UIImage
         let decodedData = NSData(base64Encoded: self, options: NSData.Base64DecodingOptions(rawValue: 0) )
         let decodedimage = UIImage(data: decodedData! as Data)
         return decodedimage!

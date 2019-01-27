@@ -11,8 +11,7 @@ import UIKit
 
 final class WebService {
     
-    func fetchPicture(request: URLRequest, completion: @escaping ((String) -> Void)) {
-        // Attempts to fetch the picture from server via HTTP "POST" request, given the user credentials are valid
+    func fetchPictureWithRequest(request: URLRequest, completion: @escaping ((String) -> Void)) {
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
                 // Check for fundamental networking error
@@ -42,7 +41,6 @@ final class WebService {
     }
 
     func createPostRequest(url: String, content_type: String, userVM: UserViewModel) -> URLRequest {
-        // Creates a HTTP POST request with given parameters and user credentials
         let urlAsUrl = URL(string: url)!
         var request = URLRequest(url: urlAsUrl)
         request.setValue(content_type, forHTTPHeaderField: "Content-Type")

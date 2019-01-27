@@ -11,7 +11,6 @@ import UIKit
 extension UITextField {
     
     public func applyUITextViewSkyBlueColorPreset(placeholder: String) {
-        // Applies preset color scheme and visual tweaks to the UITextField
         DispatchQueue.main.async {
             self.backgroundColor = .none
             self.layer.cornerRadius = 15
@@ -22,8 +21,7 @@ extension UITextField {
         }
     }
     
-    public func checkForEmpyTextField(viewController: UIViewController, alertMessage: String) {
-        // Throws an alert if a mandatory textfield is empty
+    public func checkForEmpyTextFielAndPresentAnErrorIfEmpty(viewController: UIViewController, alertMessage: String) {
         if self.text == "" {
             DispatchQueue.main.async( execute: {
                 let alertController = UIAlertController(title: "Error", message: alertMessage, preferredStyle: .alert)

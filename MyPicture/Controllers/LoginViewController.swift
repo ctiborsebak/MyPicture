@@ -41,7 +41,7 @@ class LoginViewController: UIViewController {
         loadingOverlay.showOverlay(viewController: self)
         let service = WebService()
         let request = service.createPostRequest(url: "https://mobility.cleverlance.com/download/bootcamp/image.php", content_type: "application/x-www-form-urlencoded", userVM: createUser())
-        service.fetchPicture(request: request) { (result) in
+        service.fetchPictureWithRequest(request: request) { (result) in
             if result == "authError" {
                 // Login credentials are wrong
                 loadingOverlay.hideOverlayView()
@@ -73,11 +73,12 @@ class LoginViewController: UIViewController {
     
     fileprivate func checkForEmpyTextFields() {
         // Checks for empty textfields - if empty - returns
-        usernameTextField.checkForEmpyTextField(viewController: self, alertMessage: "Username cannot be empty")
-        passwordTextField.checkForEmpyTextField(viewController: self, alertMessage: "Password cannot be empty")
+        usernameTextField.checkForEmpyTextFielAndPresentAnErrorIfEmpty(viewController: self, alertMessage: "Username cannot be empty")
+        passwordTextField.checkForEmpyTextFielAndPresentAnErrorIfEmpty(viewController: self, alertMessage: "Password cannot be empty")
     }
     
     fileprivate func showSuccessAlert() {
+        // Shows an alert with "Success!" text to give a user feedback after successful request
         DispatchQueue.main.async {
             let alert = UIAlertController(title: "Success!", message: nil, preferredStyle: .alert)
             self.present(alert, animated: true, completion: {
