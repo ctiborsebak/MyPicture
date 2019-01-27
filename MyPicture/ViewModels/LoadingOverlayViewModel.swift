@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class LoadingOverlay {
+public class LoadingOverlayViewModel {
     
     // MARK: - Properties
     

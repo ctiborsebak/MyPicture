@@ -122,7 +122,6 @@ class SHA1Hashing {
         })
         
         var temp: String = "\(self.convert_hex(val: H0))\(self.convert_hex(val: H1))\(self.convert_hex(val: H2))\(self.convert_hex(val: H3))\(self.convert_hex(val: H4))";
-        //print(temp)
         temp = temp.lowercased()
         temp = temp.replacingOccurrences(of: " ", with: "")
         
@@ -134,47 +133,3 @@ class SHA1Hashing {
     }
 }
 
-extension String {
-    func charCodeAt(_ charIndex: Int) -> Int {
-        if (self.count > charIndex) {
-            let character = String(self[index(startIndex, offsetBy: charIndex)])
-            return Int(String(character.unicodeScalars.first!.value))!
-        } else {
-            return 0
-        }
-    }
-    
-    /**
-     Make a sha1 Hash for the string.
-     - Returns: sha1 hashed string
-     */
-    public var sha1: String {
-        get {
-            return SHA1Hashing().hash(str: self)
-        }
-    }
-}
-
-
-extension Int {
-    func toString(_ i: Int) -> String {
-        if (i == 16) {// hexadecimal
-            return String(format: "%2X", self)
-                .lowercased()
-                .replacingOccurrences(of: " ", with: "")
-        }
-        else if (i == 8) {// octal
-            return String(self, radix: 8, uppercase: false)
-                .lowercased()
-                .replacingOccurrences(of: " ", with: "")
-        }
-        else if (i == 2) {// binary
-            return String(self, radix: 2, uppercase: false)
-                .lowercased()
-                .replacingOccurrences(of: " ", with: "")
-        }
-        else {
-            return String(self)
-        }
-    }
-}

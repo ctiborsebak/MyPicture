@@ -13,10 +13,10 @@ class LoginViewController: UIViewController {
     
     // MARK: - Properties
     
-    @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var getPictureButton: UIButton!
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak private var usernameTextField: UITextField!
+    @IBOutlet weak private var passwordTextField: UITextField!
+    @IBOutlet weak private var getPictureButton: UIButton!
+    @IBOutlet weak private var imageView: UIImageView!
     
     // MARK: - Initialization
     
@@ -38,7 +38,7 @@ class LoginViewController: UIViewController {
         // Attempts to fetch the picture from web service when "GET PICTURE" button is pressed
         usernameTextField.checkForEmpyTextField(viewController: self, alertMessage: "Username cannot be empty")
         passwordTextField.checkForEmpyTextField(viewController: self, alertMessage: "Password cannot be empty")
-        let loadingOverlay = LoadingOverlay()
+        let loadingOverlay = LoadingOverlayViewModel()
         loadingOverlay.showOverlay(viewController: self)
         let service = WebService()
         let testVM = UserViewModel(login: usernameTextField.text!, password: passwordTextField.text!)
@@ -50,7 +50,7 @@ class LoginViewController: UIViewController {
             } else if result == "error" {
                 // Network error: i.e. not connected to the Internet
                 loadingOverlay.hideOverlayView()
-                self.presentAlert(message: "Please ensure that you are connected to the Internet")
+                self.presentAlert(message: "Please check your connection")
             } else {
                 // Picture successfully fetched
                 loadingOverlay.hideOverlayView()
@@ -72,6 +72,7 @@ class LoginViewController: UIViewController {
     // MARK: - Helper methods
     
     fileprivate func presentAlert(message: String) {
+        // Presents an alert with a "Cancel" button after 0.5 seconds delay
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5 , execute: {
             let alertController = UIAlertController(title: "Network Error", message: message, preferredStyle: .alert)
             let action = UIAlertAction(title: "Cancel", style: .default, handler: nil)
@@ -79,5 +80,4 @@ class LoginViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
         })
     }
-    
 }

@@ -22,7 +22,7 @@ extension UITextField {
         }
     }
     
-    public func checkForEmpyTextField(viewController:UIViewController, alertMessage: String) {
+    public func checkForEmpyTextField(viewController: UIViewController, alertMessage: String) {
         // Throws an alert if a mandatory textfield is empty
         if self.text == "" {
             DispatchQueue.main.async( execute: {

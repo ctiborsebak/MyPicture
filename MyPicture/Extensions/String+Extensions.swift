@@ -29,6 +29,22 @@ extension String {
         let decodedimage = UIImage(data: decodedData! as Data)
         return decodedimage!
     }
-
+    
+    // MARK: - SHA1 hashing
+    
+    func charCodeAt(_ charIndex: Int) -> Int {
+        if (self.count > charIndex) {
+            let character = String(self[index(startIndex, offsetBy: charIndex)])
+            return Int(String(character.unicodeScalars.first!.value))!
+        } else {
+            return 0
+        }
+    }
+    
+    public var sha1: String {
+        get {
+            return SHA1Hashing().hash(str: self)
+        }
+    }
 }
 
