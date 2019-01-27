@@ -11,15 +11,8 @@ import UIKit
 
 final class WebService {
     
-     func fetchPicture(userVM: UserViewModel, completion: @escaping ((String) -> Void)) {
+    func fetchPicture(request: URLRequest, completion: @escaping ((String) -> Void)) {
         // Attempts to fetch the picture from server via HTTP "POST" request, given the user credentials are valid
-        let url = URL(string: "https://mobility.cleverlance.com/download/bootcamp/image.php")!
-        var request = URLRequest(url: url)
-        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        request.setValue("\(userVM.getHashedPassword())", forHTTPHeaderField: "Authorization")
-        request.httpMethod = "POST"
-        let postString = "username=\(userVM.getUsername())"
-        request.httpBody = postString.data(using: .utf8)
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
                 // Check for fundamental networking error
@@ -47,4 +40,18 @@ final class WebService {
         }
         task.resume()
     }
+
+    func createPostRequest(url: String, content_type: String, userVM: UserViewModel) -> URLRequest {
+        // Creates a HTTP POST request with given parameters and user credentials
+        let urlAsUrl = URL(string: url)!
+        var request = URLRequest(url: urlAsUrl)
+        request.setValue(content_type, forHTTPHeaderField: "Content-Type")
+        request.setValue("\(userVM.getHashedPassword())", forHTTPHeaderField: "Authorization")
+        request.httpMethod = "POST"
+        let postString = "username=\(userVM.getUsername())"
+        request.httpBody = postString.data(using: .utf8)
+        return request
+    }
+
 }
+

@@ -36,13 +36,12 @@ class LoginViewController: UIViewController {
     
     @IBAction func getPictureButtonPressed(_ sender: Any) {
         // Attempts to fetch the picture from web service when "GET PICTURE" button is pressed
-        usernameTextField.checkForEmpyTextField(viewController: self, alertMessage: "Username cannot be empty")
-        passwordTextField.checkForEmpyTextField(viewController: self, alertMessage: "Password cannot be empty")
         let loadingOverlay = LoadingOverlayViewModel()
+        checkForEmpyTextFields()
         loadingOverlay.showOverlay(viewController: self)
         let service = WebService()
-        let testVM = UserViewModel(login: usernameTextField.text!, password: passwordTextField.text!)
-        service.fetchPicture(userVM: testVM) { (result) in
+        let request = service.createPostRequest(url: "https://mobility.cleverlance.com/download/bootcamp/image.php", content_type: "application/x-www-form-urlencoded", userVM: createUser())
+        service.fetchPicture(request: request) { (result) in
             if result == "authError" {
                 // Login credentials are wrong
                 loadingOverlay.hideOverlayView()
@@ -54,15 +53,10 @@ class LoginViewController: UIViewController {
             } else {
                 // Picture successfully fetched
                 loadingOverlay.hideOverlayView()
+                self.showSuccessAlert()
                 let parsedResult = result.parse(to: PictureViewModel.self)
+                let imageString = parsedResult?.getImage()
                 DispatchQueue.main.async {
-                    let alert = UIAlertController(title: "Success!", message: nil, preferredStyle: .alert)
-                    self.present(alert, animated: true, completion: {
-                        DispatchQueue.main.asyncAfter(deadline: .now()+0.5, execute: {
-                            alert.dismiss(animated: true, completion: nil)
-                        })
-                    })
-                    let imageString = parsedResult?.getImage()
                     self.imageView.image = imageString?.convertBase64ToImage()
                 }
             }
@@ -70,6 +64,29 @@ class LoginViewController: UIViewController {
     }
     
     // MARK: - Helper methods
+    
+    fileprivate func createUser() -> UserViewModel {
+        // Creates a UserViewModel from the credentials given in usernameTextField and passwordTextField
+        let userVM = UserViewModel(login: usernameTextField.text!, password: passwordTextField.text!)
+        return userVM
+    }
+    
+    fileprivate func checkForEmpyTextFields() {
+        // Checks for empty textfields - if empty - returns
+        usernameTextField.checkForEmpyTextField(viewController: self, alertMessage: "Username cannot be empty")
+        passwordTextField.checkForEmpyTextField(viewController: self, alertMessage: "Password cannot be empty")
+    }
+    
+    fileprivate func showSuccessAlert() {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Success!", message: nil, preferredStyle: .alert)
+            self.present(alert, animated: true, completion: {
+                DispatchQueue.main.asyncAfter(deadline: .now()+0.5, execute: {
+                    alert.dismiss(animated: true, completion: nil)
+                })
+            })
+        }
+    }
     
     fileprivate func presentAlert(message: String) {
         // Presents an alert with a "Cancel" button after 0.5 seconds delay
