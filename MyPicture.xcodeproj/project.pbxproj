@@ -18,12 +18,23 @@
 		8F30335A21F744F10081827E /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F30335921F744F10081827E /* WebService.swift */; };
 		8FB1888221F789A300CAB662 /* SHA1Hashing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB1888121F789A300CAB662 /* SHA1Hashing.swift */; };
 		8FB9255C21FCCAB00067501E /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB9255B21FCCAB00067501E /* Int+Extensions.swift */; };
+		8FB9257021FE0BD40067501E /* WebServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB9256F21FE0BD40067501E /* WebServiceTests.swift */; };
 		8FFAD93E21F4CF7A0050E584 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFAD93D21F4CF7A0050E584 /* AppDelegate.swift */; };
 		8FFAD94021F4CF7A0050E584 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFAD93F21F4CF7A0050E584 /* LoginViewController.swift */; };
 		8FFAD94321F4CF7A0050E584 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FFAD94121F4CF7A0050E584 /* Main.storyboard */; };
 		8FFAD94521F4CF800050E584 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FFAD94421F4CF800050E584 /* Assets.xcassets */; };
 		8FFAD94821F4CF800050E584 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FFAD94621F4CF800050E584 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8FB9256A21FE0B9A0067501E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8FFAD93221F4CF7A0050E584 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FFAD93921F4CF7A0050E584;
+			remoteInfo = MyPicture;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1B7916E49080D555ABAF843E /* Pods_MyPicture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPicture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,6 +50,9 @@
 		8F30335921F744F10081827E /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		8FB1888121F789A300CAB662 /* SHA1Hashing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA1Hashing.swift; sourceTree = "<group>"; };
 		8FB9255B21FCCAB00067501E /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		8FB9256521FE0B9A0067501E /* MyPictureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyPictureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FB9256921FE0B9A0067501E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FB9256F21FE0BD40067501E /* WebServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceTests.swift; sourceTree = "<group>"; };
 		8FFAD93A21F4CF7A0050E584 /* MyPicture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPicture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FFAD93D21F4CF7A0050E584 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FFAD93F21F4CF7A0050E584 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +63,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8FB9256221FE0B9A0067501E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8FFAD93721F4CF7A0050E584 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -99,10 +120,20 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		8FB9256621FE0B9A0067501E /* MyPictureTests */ = {
+			isa = PBXGroup;
+			children = (
+				8FB9256F21FE0BD40067501E /* WebServiceTests.swift */,
+				8FB9256921FE0B9A0067501E /* Info.plist */,
+			);
+			path = MyPictureTests;
+			sourceTree = "<group>";
+		};
 		8FFAD93121F4CF7A0050E584 = {
 			isa = PBXGroup;
 			children = (
 				8FFAD93C21F4CF7A0050E584 /* MyPicture */,
+				8FB9256621FE0B9A0067501E /* MyPictureTests */,
 				8FFAD93B21F4CF7A0050E584 /* Products */,
 				E6A6B1AFBB3F5F5BA6C0B396 /* Pods */,
 				1007A5F4B2CED9C0C3B26463 /* Frameworks */,
@@ -113,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				8FFAD93A21F4CF7A0050E584 /* MyPicture.app */,
+				8FB9256521FE0B9A0067501E /* MyPictureTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -169,6 +201,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8FB9256421FE0B9A0067501E /* MyPictureTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FB9256C21FE0B9B0067501E /* Build configuration list for PBXNativeTarget "MyPictureTests" */;
+			buildPhases = (
+				8FB9256121FE0B9A0067501E /* Sources */,
+				8FB9256221FE0B9A0067501E /* Frameworks */,
+				8FB9256321FE0B9A0067501E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8FB9256B21FE0B9A0067501E /* PBXTargetDependency */,
+			);
+			name = MyPictureTests;
+			productName = MyPictureTests;
+			productReference = 8FB9256521FE0B9A0067501E /* MyPictureTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		8FFAD93921F4CF7A0050E584 /* MyPicture */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FFAD94C21F4CF800050E584 /* Build configuration list for PBXNativeTarget "MyPicture" */;
@@ -198,6 +248,10 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Ctibor Šebák";
 				TargetAttributes = {
+					8FB9256421FE0B9A0067501E = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 8FFAD93921F4CF7A0050E584;
+					};
 					8FFAD93921F4CF7A0050E584 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -217,11 +271,19 @@
 			projectRoot = "";
 			targets = (
 				8FFAD93921F4CF7A0050E584 /* MyPicture */,
+				8FB9256421FE0B9A0067501E /* MyPictureTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8FB9256321FE0B9A0067501E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8FFAD93821F4CF7A0050E584 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -274,6 +336,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8FB9256121FE0B9A0067501E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FB9257021FE0BD40067501E /* WebServiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8FFAD93621F4CF7A0050E584 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -295,6 +365,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8FB9256B21FE0B9A0067501E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FFAD93921F4CF7A0050E584 /* MyPicture */;
+			targetProxy = 8FB9256A21FE0B9A0067501E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		8FFAD94121F4CF7A0050E584 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -315,6 +393,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8FB9256D21FE0B9B0067501E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AER56P3865;
+				INFOPLIST_FILE = MyPictureTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sebakctibor94.MyPictureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyPicture.app/MyPicture";
+			};
+			name = Debug;
+		};
+		8FB9256E21FE0B9B0067501E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AER56P3865;
+				INFOPLIST_FILE = MyPictureTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sebakctibor94.MyPictureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyPicture.app/MyPicture";
+			};
+			name = Release;
+		};
 		8FFAD94A21F4CF800050E584 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -472,6 +590,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8FB9256C21FE0B9B0067501E /* Build configuration list for PBXNativeTarget "MyPictureTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FB9256D21FE0B9B0067501E /* Debug */,
+				8FB9256E21FE0B9B0067501E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8FFAD93521F4CF7A0050E584 /* Build configuration list for PBXProject "MyPicture" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
