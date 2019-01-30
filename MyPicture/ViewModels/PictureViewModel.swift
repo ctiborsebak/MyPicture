@@ -19,5 +19,4 @@ struct PictureViewModel: Codable {
     func getImage() -> String {
         return self.image
     }
-
 }

@@ -11,29 +11,32 @@ import UIKit
 
 final class WebService {
     
+    let errorString = "error"
+    let authErrorString = "authError"
+    
     func fetchPictureWithRequest(request: URLRequest, completion: @escaping ((String) -> Void)) {
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
                 // Check for fundamental networking error
                 print("Networking error: \(error)")
-                completion("error")
+                completion(errorString)
                 return
             }
             if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
                 // Check for http errors
                 if httpStatus.statusCode == 401 {
-                    completion("authError")
+                    completion(authErrorString)
                     return
                 } else {
                     print("The HTTP status should be 200, but is: \(httpStatus.statusCode)")
-                    completion("error")
+                    completion(errorString)
                     return
                 }
             }
             if let responseString = String(data: data, encoding: .utf8) {
                 completion(responseString)
             } else {
-                completion("error")
+                completion(errorString)
                 return
             }
         }
