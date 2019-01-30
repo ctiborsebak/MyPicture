@@ -19,24 +19,24 @@ final class WebService {
             guard let data = data, error == nil else {
                 // Check for fundamental networking error
                 print("Networking error: \(error)")
-                completion(errorString)
+                completion(self.errorString)
                 return
             }
             if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
                 // Check for http errors
                 if httpStatus.statusCode == 401 {
-                    completion(authErrorString)
+                    completion(self.authErrorString)
                     return
                 } else {
                     print("The HTTP status should be 200, but is: \(httpStatus.statusCode)")
-                    completion(errorString)
+                    completion(self.errorString)
                     return
                 }
             }
             if let responseString = String(data: data, encoding: .utf8) {
                 completion(responseString)
             } else {
-                completion(errorString)
+                completion(self.errorString)
                 return
             }
         }
